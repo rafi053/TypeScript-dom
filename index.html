@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storeroom</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <section>
+        <h1 class="title">BATTALION FORCE MANAGEMENT</h1>
+    <form class="create-scooter">
+        <input type="text" id="model" placeholder="model" required>
+        <input type="number" id="batteryLevel" placeholder="batteryLevel" required>
+        <input type="text" id="imageUrl" placeholder="imageUrl" required>
+        <input type="text" id="color" placeholder="color" required>
+        <select name="status" id="status">
+            <option value="available">available</option>
+            <option value="inRepair">inRepair</option>
+            <option value="unavailable">unavailable</option>
+        </select>
+        <input type="submit" value="create scooter" id ="scooter-submit">
+    </form>
+    </section>
+    <section>
+        <table class="information" border="1">
+            <thead>
+            <th>model</th>
+            <th>batteryLevel</th>
+            <th>imageUrl</th>
+            <th>color</th>
+            <th>status</th>
+            <th>action</th>
+        </thead>
+        <tbody id="table-body">
+            
+        </tbody>
+    
+        </table>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
