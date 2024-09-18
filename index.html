@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="">
 </head>
 <body>
-    <section>
-        <h1 class="title">BATTALION FORCE MANAGEMENT</h1>
-    <form class="create-scooter">
+    <section id="main-page">
+        <h1>Storeroom</h1>
+        <form id="add-scooter">
         <input type="text" id="model" placeholder="model" required>
         <input type="number" id="batteryLevel" placeholder="batteryLevel" required>
         <input type="text" id="imageUrl" placeholder="imageUrl" required>
@@ -19,26 +19,61 @@
             <option value="inRepair">inRepair</option>
             <option value="unavailable">unavailable</option>
         </select>
-        <input type="submit" value="create scooter" id ="scooter-submit">
+        <button type="submit">Add Scooter</button>
     </form>
-    </section>
-    <section>
-        <table class="information" border="1">
+
+    <h2>Scorers  Overview</h2>
+        <table  border="1">
             <thead>
+            <tr>
             <th>model</th>
             <th>batteryLevel</th>
             <th>imageUrl</th>
             <th>color</th>
             <th>status</th>
             <th>action</th>
+            </tr>
         </thead>
         <tbody id="table-body">
-            
+            <!-- <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                
+            </tr>
+            <tr></tr>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+                
+            </tr> -->
         </tbody>
-    
         </table>
     </section>
+    <section id="edit-page">
+        <h1>Edit scooter</h1>
+        <form id="edit-scooter">
+            <input type="text" id="edit-model" placeholder="model" required>
+            <input type="number" id="edit-batteryLevel" placeholder="batteryLevel" required>
+            <input type="text" id="edit-imageUrl" placeholder="imageUrl" required>
+            <input type="text" id="edit-color" placeholder="color" required>
+            <select name="status" id="edit-status">
+                <option value="available">available</option>
+                <option value="inRepair">inRepair</option>
+                <option value="unavailable">unavailable</option>
+            </select>
+            <button type="submit" id="save-changes">Save Changes</button>
+            <button type="button" class="cancel-btn" >Cancel</button>
+
+        </form>
+    </section>
     
-    <script src="script.js"></script>
+    <script type="module" src="./javascript/script.js"></script>
 </body>
 </html>

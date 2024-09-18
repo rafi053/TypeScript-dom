@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="editstyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battalion Force Management</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        form { margin-bottom: 20px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 10px; border: 1px solid #ddd; }
+        th { background-color: #f4f4f4; }
+        button { padding: 5px 10px; margin-right: 5px; }
+        #editpage { display: none; } /* Hide edit form initially */
+    </style>
+</head>
+<body>
+<section id="mainpage">
+    <h1>Battalion Force Management</h1>
+
+    <form id="add-personnel-form">
+        <input type="text" id="full-name" placeholder="Full Name" required>
+        <input type="text" id="rank" placeholder="Rank" required>
+        <input type="text" id="position" placeholder="Position" required>
+        <input type="text" id="platoon" placeholder="Platoon" required>
+        <input type="number" id="missionLength" placeholder="Mission Time (seconds)" required>
+        <select id="status">
+            <option value="Active">Active</option>
+            <option value="Reserves">Reserves</option>
+            <option value="Retired">Retired</option>
+        </select>
+        <button type="submit">Add Personnel</button>
+    </form>
+
+    <h2>Forces Overview</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>  <button onclick="orderByName()">Full Name &#8595;</button></th>
+                <th>Rank</th>
+                <th>Position</th>
+                <th>Platoon</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="personnel-table"></tbody>
+    </table>
+</section>
+
+<section id="editpage">
+    <h1>Edit Personnel</h1>
+
+    <form id="edit-personnel-form">
+        <input type="text" id="edit-full-name" placeholder="Full Name" required>
+        <input type="text" id="edit-rank" placeholder="Rank" required>
+        <input type="text" id="edit-position" placeholder="Position" required>
+        <input type="text" id="edit-platoon" placeholder="Platoon" required>
+        <select id="edit-status">
+            <option value="Active">Active</option>
+            <option value="Reserves">Reserves</option>
+            <option value="Retired">Retired</option>
+        </select>
+        <input type="number" id="edit-missionLength" placeholder="Mission Time (seconds)" required>
+        <button type="submit">Save Changes</button>
+        <button type="button" class="cancel-btn" onclick="switchToMainPage()">Cancel</button>
+    </form>
+</section>
+<script src="script.js">
+
+</script>
+</body>
+</html>

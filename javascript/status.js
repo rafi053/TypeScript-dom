@@ -1,9 +1,6 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.Status = void 0;
-var Status;
+export var Status;
 (function (Status) {
     Status["available"] = "available";
     Status["inRepair"] = "inRepair";
     Status["unavailable"] = "unavailable";
-})(Status || (exports.Status = Status = {}));
+})(Status || (Status = {}));
